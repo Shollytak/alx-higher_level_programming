@@ -1,6 +1,13 @@
 #!/usr/bin/python3
-def best_score(a_dictionary):
-    if not a_dictionary:
-        return (None)
+def weight_average(my_list=[]):
+    if not my_list:
+        return 0
 
-    return (max(a_dictionary, key=a_dictionary.get)))
+    num = 0
+    den = 0
+
+    for tup in my_list:
+        num += tup[0] * tup[1]
+        den += tup[1]
+
+    return (num / den)
