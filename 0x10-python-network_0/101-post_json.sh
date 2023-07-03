@@ -1,3 +1,3 @@
 #!/bin/bash
-# Bash Script to GET request and SHOW the response status code.
-curl -s -o /dev/null -w "%{http_code}" "$1"
+# Bash Script to do a JSON POST request with a provided JSON file.
+curl -s -H "Content-Type: application/json" -d "$(cat "$2")" "$1"
